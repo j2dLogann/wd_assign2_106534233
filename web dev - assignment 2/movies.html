@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" >
+    <meta name="description" content="Web development" >
+    <meta name="keywords" content="Movie discovery and ticket booking platform" >
+    <meta name="author" content="John L." >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>CineHolder · Movies</title>
+
+<link href="cssfiles/desktop.css" rel="stylesheet" media="screen and (min-width: 1024px)">
+<link href="cssfiles/tablet.css" rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1023px)">
+<link href="cssfiles/mobile.css" rel="stylesheet" media="screen and (max-width: 767px)">
+<script src="jsfiles/script.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>CineHolder</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="movies.html" class="active">Movies</a>
+            <a href="recommend.html">Recommendations</a>
+            <a href="register.html">Register</a>
+            <a href="booking.html">Book</a>
+        </nav>
+    </header>
+
+
+<main>
+<section class="segment">
+    <h2>Discover Your Next Movie</h2>
+        <p>
+            Your next cinematic adventure awaits! 
+            Explore our collection of movies and find your next screening.
+        </p>
+</section>
+
+<!--Individual movie card consists of information regarding...-->
+<!--what genres, age rating, and movie length is -->
+<!--Adult pricing is only displayed and serves as a basis-->
+<!--Decription is referenced to the synopsis of the movie, with sources inside of "Readme.txt"-->
+<!--Layout of movie cards are displayed into grids from 2 per row due to "collection" class-->
+<section>
+    <h2>Now Showing</h2>
+        <div class="collection">
+            <!--Movie 1-->
+            <article class="movieCard">
+                <img src="images/spider-man.jpg"
+                    alt="Spider-man: Brand New Day">
+
+                    <h3>Spider-Man: Brand New Day</h3>
+                        <p class="description">
+                            Four years after the events of No Way Home, a forgotten adult Peter Parker
+                            dedicates himself to protecting New York City as a full-time crime-fighting Spider-Man.
+                            As the demands on him intensify and a powerful new threat emerges 
+                            he must learn to balance both his human identity and his spider-side whilst undergoing
+                            a genetic mutation that threatens his life.
+                        </p>
+
+                        <p class="movieMeta">Action / Adventure · M · 145 minutes</p>
+                        <p class="pricing">Adult ticket: $18.00</p>
+                        <p class="screening">Screening: 1:30pm, 6:45pm</p>
+
+                        <!--Styled button that links to the booking page containing the movie id inside of the HTML of the selected movie-->
+                        <a href="booking.html?movie=spider-man" 
+                            class="bookButton">
+                            Book Tickets ➝
+                        </a>
+            </article>
+
+            <!--Movie 2-->
+            <article class="movieCard">
+                <img src="images/odyssey.jpg"
+                    alt="The Odyssey">
+                
+                    <h3>The Odyssey</h3>
+                        <p class="description">
+                            After the Trojan War, Odysseus is faced with a dangerous voyage back
+                            to Ithaca where he is met with many mythical creatures and dangerous monsters, 
+                            such as the Cyclops Polyphemus, Laestrygonians, Sirens, and the deity Calypso. 
+                            With the dangers standing between him and home. Odysseus' return is critical
+                            as his palace, family, and kingdom are on the brink of ruin.
+                        </p>
+
+                        <p class="movieMeta">Fantasy / Adventure · M · 172 minutes</p>
+                        <p class="pricing">Adult ticket: $20.00</p>
+                        <p class="screening">Screening: 4:30pm, 8:00pm</p>
+
+                        <a href="booking.html?movie=odyssey" 
+                            class="bookButton">
+                            Book Tickets ➝
+                        </a>
+            </article>
+
+            <!--Movie 3-->
+            <article class="movieCard">
+                <img src="images/supermario.jpg"
+                    alt="The Super Mario Galaxy Movie">
+                
+                    <h3>The Super Mario Galaxy Movie</h3>
+                        <p class="description">
+                            Follows Mario and Luigi as they venture beyond the Mushroom Kingdom and into outer space, 
+                            exploring through the cosmos and taking on galactic challenges in pursuit of the 
+                            kidnapped Princess Rosalina by the mischievous child prodigy Bowser Jr who threatens the galaxy. 
+                            With the help of familiar friends and new allies, the Mario Brothers are sure to power-up.
+                        </p>
+
+                        <p class="movieMeta">Animation · PG · 98 minutes</p>
+                        <p class="pricing">Adult ticket: $18.00</p>
+                        <p class="screening">Screening: 2:00pm, 5:30pm</p>
+
+                        <a href="booking.html?movie=supermario" 
+                            class="bookButton">
+                            Book Tickets ➝
+                        </a>
+            </article>
+
+            <!--Movie 4-->
+            <article class="movieCard">
+                <img src="images/lalaland.jpg"
+                    alt="La La Land">
+                
+                    <h3>La La Land</h3>
+                        <p class="description">
+                            When a dedicated pianist and an aspiring actress follow their passion and pursue success, Sebastian and Mia find themselves 
+                            torn between their love for each other and their dreams. This musical explores their bond for ambitions and the conflicts between 
+                            the love they share and growing success. <em>"Here's to the fools who dream".</em>
+                        </p>
+
+                        <p class="movieMeta">Drama / Musical · M · 128 minutes</p>
+                        <p class="pricing">Adult ticket: $14.00</p>
+                        <p class="screening">Screening: 6:00pm</p>
+
+                        <a href="booking.html?movie=lalaland" 
+                            class="bookButton">
+                            Book Tickets ➝
+                        </a>
+            </article>
+
+            <!--Movie 5-->
+            <article class="movieCard">
+                <img src="images/hailmary.jpg"
+                    alt="Project Hail Mary">
+
+                    <h3>Project Hail Mary</h3>
+                        <p class="description">
+                            Ryland Grace, a middle school science teacher, wakes onboard a spaceship light-years away from home with no memory of who 
+                            or how he got there. All alone, Ryland must piece together his memories in time to uncover his mission: To save planet Earth. 
+                            With the fate of humanity at stake, he soon realizes that an unexpected friendship may just be what he needs.
+                        </p>
+
+                        <p class="movieMeta">Science fiction / Adventure · M · 156 minutes</p>
+                        <p class="pricing">Adult ticket: $18.00</p>
+                        <p class="screening">Screening: 2:30pm, 7:00pm</p>
+
+                        <a href="booking.html?movie=hailmary" 
+                            class="bookButton">
+                            Book Tickets ➝
+                        </a>
+            </article>
+
+            <!--Movie 6-->
+            <article class="movieCard">
+                <img src="images/3idiots.jpg"
+                    alt="3 Idiots">
+                
+                    <h3>3 Idiots</h3>
+                        <p class="description">
+                            Two friends set out to find their brilliant minded friend, Ranchoddas, whose eccentric approach to 
+                            engineering school changes their lives for the better. Determined, Farhan and Raju are met with only clues to where 
+                            their free-spirited friend may be. As they search, they revisit memories of their college days, filled with laughter, friendship, 
+                            and challenges to the pressures of the Indian education system.
+                        </p>
+
+                        <p class="movieMeta">Comedy / Drama · M · 171 minutes</p>
+                        <p class="pricing">Adult ticket: $14.00</p>
+                        <p class="screening">Screening: 3:30pm</p>
+
+                        <a href="booking.html?movie=3idiots" 
+                            class="bookButton">
+                            Book Tickets ➝
+                        </a>
+            </article>
+        </div>
+</section>
+
+</main>
+
+<footer>
+    <p>By John L. &nbsp;&nbsp;&nbsp;2026 CineHolder</p>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" >
+    <meta name="description" content="Web development" >
+    <meta name="keywords" content="Movie discovery and ticket booking platform" >
+    <meta name="author" content="John L." >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>CineHolder · Home</title>
+
+<link href="cssfiles/desktop.css" rel="stylesheet" media="screen and (min-width: 1024px)">
+<link href="cssfiles/tablet.css" rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1023px)">
+<link href="cssfiles/mobile.css" rel="stylesheet" media="screen and (max-width: 767px)">
+<script src="jsfiles/script.js" defer></script>
+
+</head>
+
+<body>
+    <!--Header contains website name and navigation bar-->
+    <!--Website name and nav bar is consistent throughout webpages-->
+    <!--Utilised the class "active" to display the current page-->
+    <header>
+        <h1>CineHolder</h1>
+
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="movies.html">Movies</a>
+            <a href="recommend.html">Recommendations</a>
+            <a href="register.html">Register</a>
+            <a href="booking.html">Book</a>
+        </nav>
+    </header>
+
+    <!--Used "segment" class throughout the webpages to style passages of text-->
+<main>
+    <section class="segment">
+            <h2>Make Movie Night <em>Right!</em></h2>
+                <p>
+                    Discover new releases, explore films and genres, 
+                    then book your next cinema experience—all in one place.
+                </p>
+    </section>
+
+    <section class="segment">
+        <h2>Set the Scene</h2>
+            <p>
+                At <strong>CineHolder</strong>, there's a movie for every occasion. Find the perfect film for the family, 
+                engage in an action-packed adventure with friends, match the mood as a couple, 
+                or indulge in your fine taste for films as a movie enthusiast. Whatever it is, 
+                <strong>CineHolder</strong> is sure to hold the ideal setting with the ideal movie.
+            </p>
+
+            <!--Referenced the auditorium image to the name of the article I found the image and typed it inside of "figcaption"-->
+            <figure>
+                <img class="indexImage" src="images/cinema_auditorium.jpg" 
+                    alt="Cinema auditorium with rows of seats facing the screen">
+                    <figcaption>
+                        <em>Source: Passionate In Marketing - Movies to play in theatres for 8 weeks before hitting
+                        OTT platforms</em>
+                    </figcaption>
+            </figure>
+    </section>
+
+    <!--Utilised "services" class to display flex containing the individual service cards-->
+    <!--The individual service cards are linked to their respective pages, allowing users to click on them based off their interests-->
+    <section class="segment">
+        <h2>Simplify Your Movie Experience</h2>
+        <div class="services">
+            <a href="movies.html">
+                <article class="serviceCard">
+                    <h3>Discover</h3>
+                        <p>
+                            Your love for movies with our discovery page and find out what's currently showing.
+                        </p>
+                        <span>
+                            Explore ➝
+                        </span>
+                </article>
+            </a>
+            
+            <a href="recommend.html">
+                <article class="serviceCard">
+                    <h3>Personalise</h3>
+                        <p>
+                            Your preferences with our movie recommendations to suit your taste.
+                        </p>
+                        <span>
+                            Get Recommendations ➝
+                        </span>
+                </article>
+            </a>
+
+            <a href="booking.html">
+                <article class="serviceCard">
+                    <h3>Book</h3>
+                        <p>
+                            Your next cinema experience with screening selection and ticket booking made easier.
+                        </p>
+                        <span>
+                            Book Tickets ➝
+                        </span>
+                </article>
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<!--Footer is styled with the "sticky footer" approach to have the footer consistently at the bottom of each loaded page within the platform-->
+<footer>
+    <p>By John L. &nbsp;&nbsp;&nbsp;2026 CineHolder</p>
+</footer>
+
+</body>
+
+</html>

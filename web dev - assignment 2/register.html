@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" >
+    <meta name="description" content="Web development" >
+    <meta name="keywords" content="Movie discovery and ticket booking platform" >
+    <meta name="author" content="John L." >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>CineHolder · Register</title>
+
+<link href="cssfiles/desktop.css" rel="stylesheet" media="screen and (min-width: 1024px)">
+<link href="cssfiles/tablet.css" rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1023px)">
+<link href="cssfiles/mobile.css" rel="stylesheet" media="screen and (max-width: 767px)">
+<script src="jsfiles/script.js" defer></script>
+
+</head>
+
+<body>
+
+
+<!--An "error window" popup is displayed when the user submits the form with invalid inputs-->
+<!--The error window is styled and will present strings of text regarding validation requirements-->
+<!--The strings will be given into the empty container "errorMessages"-->
+<!--"scrnOverlay" is styled and tageted by JavaScript to give it meaningful properties-->
+<!--"scrnOverlay" is diaplayed behind the error popup-->
+<!--A button is located at the bottom of the popup message to close it-->
+<!--For accessibility, the use of "aria" attributes are identified for assistive technologies-->
+<div id="scrnOverlay"></div>
+
+<div id="errorWindow" class="window" role="alertdialog"
+     aria-modal="true" aria-labelledby="errorTitle">
+        <h2 id="errorTitle">Invalid Registration</h2>
+
+    <div id="errorMessages"></div>
+
+    <button type="button" id="errorClose" class="errorButton">
+        Close
+    </button>
+</div>
+
+    <header>
+        <h1>CineHolder</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="movies.html">Movies</a>
+            <a href="recommend.html">Recommendations</a>
+            <a href="register.html" class="active">Register</a>
+            <a href="booking.html">Book</a>
+        </nav>
+    </header>
+
+
+<main>
+<section class="segment">
+    <h2>Join Us!</h2>
+        <p>
+            Become a <strong>CineHolder member</strong> and receive notifications about new movie releases based on your preferences, 
+            along with exclusive discounts and special promotions.
+        </p>
+</section>
+
+<!--Used "for" attribute is used on each individual label mainly for acessibility reasons-->
+<!--Established "id"s for each individual input to allow them to be targeted by JavaScript-->
+<section class="infoPanel">
+    <h2>Create your CineHolder account</h2>
+    
+    <form id="registerForm">
+        
+        <fieldset>
+            <div class="formInput">
+                <label for="username">Username</label>
+                    <input type="text" id="username" name="username">
+            </div>
+
+            <div class="formInput">
+                <label for="email">Email Address</label>
+                    <input type="text" id="email" name="email">
+            </div>
+
+            <div class="formInput">
+                <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+            </div>
+
+            <div class="formInput">
+                <label for="password">Password</label>
+                    <input type="password" id="password" name="password">
+            </div>
+            
+            <div class="formInput">
+                <label for="confirmPass">Confirm Password</label>
+                    <input type="password" id="confirmPass" name="confirmPass">
+            </div>
+        </fieldset>
+
+        <fieldset class="formInputChoice">
+            <legend>Gender</legend>
+
+                <label for="genM" class="radioLabel">
+                    <input id="genM" type="radio" name="gender" value="male">
+                    Male
+                </label>
+
+                <label for="genF" class="radioLabel">
+                    <input id="genF" type="radio" name="gender" value="female">
+                    Female
+                </label>
+
+                <label for="genOther" class="radioLabel">
+                    <input id="genOther" type="radio" name="gender" value="other">
+                    Other
+                </label>
+
+                <label for="genDisclosed" class="radioLabel">
+                    <input id="genDisclosed" type="radio" name="gender" value="disclosed">
+                    Prefer not to say
+                </label>
+        </fieldset>
+
+        <fieldset class="formInputChoice2">
+            <legend>Preferred Movie Genre(s)</legend>
+
+                <label for="genreAction" class="checkboxLabel">
+                    <input id="genreAction" type="checkbox" name="genres" value="Action">
+                    Action
+                </label>
+
+                <label for="genreAdventure" class="checkboxLabel">
+                    <input id="genreAdventure" type="checkbox" name="genres" value="Adventure">
+                    Adventure
+                </label>
+
+                <label for="genreAnimation" class="checkboxLabel">
+                    <input id="genreAnimation" type="checkbox" name="genres" value="Animation">
+                    Animation
+                </label>
+
+                <label for="genreComedy" class="checkboxLabel">
+                    <input id="genreComedy" type="checkbox" name="genres" value="Comedy">
+                    Comedy
+                </label>
+
+                <label for="genreDrama" class="checkboxLabel">
+                    <input id="genreDrama" type="checkbox" name="genres" value="Drama">
+                    Drama
+                </label>
+
+                <label for="genreFantasy" class="checkboxLabel">
+                    <input id="genreFantasy" type="checkbox" name="genres" value="Fantasy">
+                    Fantasy
+                </label>
+
+                <label for="genreMusical" class="checkboxLabel">
+                    <input id="genreMusical" type="checkbox" name="genres" value="Musical">
+                    Musical
+                </label>
+
+                <label for="genreSF" class="checkboxLabel">
+                    <input id="genreSF" type="checkbox" name="genres" value="Science Fiction">
+                    Science Fiction
+                </label>
+        </fieldset>
+
+        <fieldset>
+            <div class="formInput">
+                <label for="country">Country / Region</label>
+                    <select id="country" name="country">
+                        <option value="">Select</option>
+                        <option value="Australia">Australia</option>
+                        <option value="China">China</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Hong Kong">Hong Kong</option>
+                        <option value="India">India</option>
+                        <option value="New Zealand">New Zealand</option>
+                        <option value="The Philippines">The Philippines</option>
+                        <option value="Singapore">Singapore</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="United States">United States</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <button type="submit" class="panelButton">
+            Create Account
+        </button>
+    </form>
+</section>
+
+</main>
+
+<footer>
+    <p>By John L. &nbsp;&nbsp;&nbsp;2026 CineHolder</p>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" >
+    <meta name="description" content="Web development" >
+    <meta name="keywords" content="Movie discovery and ticket booking platform" >
+    <meta name="author" content="John L." >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>CineHolder · Recommendations</title>
+
+<link href="cssfiles/desktop.css" rel="stylesheet" media="screen and (min-width: 1024px)">
+<link href="cssfiles/tablet.css" rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1023px)">
+<link href="cssfiles/mobile.css" rel="stylesheet" media="screen and (max-width: 767px)">
+<script src="jsfiles/script.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>CineHolder</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="movies.html">Movies</a>
+            <a href="recommend.html" class="active">Recommendations</a>
+            <a href="register.html">Register</a>
+            <a href="booking.html">Book</a>
+        </nav>
+    </header>
+
+
+<main>
+<section class="segment">
+    <h2>Find the Perfect Movie</h2>
+        <p>
+            Not sure on what to watch? Tell us what you enjoy and we'll help you find a movie for your next 
+            cinema experience.
+        </p>
+</section>
+
+
+<!--Used the class "infoPanel" consistently throughout the website when a form panel is required-->
+<!--Adopted "diabled selected hidden" to have a placeholder option within each field which are then hidden when user clicks on the fields-->
+<!--Assigned specific "id" and "value" -values to be used within JavaScript preference evaluation process-->
+<section class="infoPanel">
+    <h2>Pick from your preferences</h2>
+    
+    <form id="recommendForm">
+        <fieldset>
+            <div class="formInput">
+                <label for="movieGenre">1. What genre do you enjoy?</label>
+                    <select id="movieGenre" name="movieGenre" required>
+                        <option value="" disabled selected hidden>Select a genre</option>
+                        <option value="action">Action</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="animation">Animation</option>
+                        <option value="comedy">Comedy</option>
+                        <option value="drama">Drama</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="musical">Musical</option>
+                        <option value="scienceFiction">Science Fiction</option>
+                    </select>
+            </div>
+
+            <div class="formInput">
+                <label for="ageGroup">2. Who will be watching?</label>
+                    <select id="ageGroup" name="ageGroup" required>
+                        <option value="" disabled selected hidden>Select an age group</option>
+                        <option value="child">Children</option>
+                        <option value="teen">Teenager</option>
+                        <option value="adult">Adult</option>
+                    </select>
+            </div>
+
+            <div class="formInput">
+                <label for="viewPreference">3. What's the occasion?</label>
+                    <select id="viewPreference" name="viewPreference" required>
+                        <option value="" disabled selected hidden>Select an occasion</option>
+                        <option value="family">Family outing</option>
+                        <option value="couple">Date night</option>
+                        <option value="friends">With friends</option>
+                        <option value="solo">Watching solo</option>
+                    </select>
+            </div>
+        </fieldset>
+        
+        <button type="submit" class="panelButton">
+            Find My Movie ➝
+        </button>
+    </form>
+
+
+<!--Container used for JavaScript to target and dynamically display the recommended movie based on the user's selected preferences-->
+<!--"aria-live="polite"" allows screen readers to announce the displayed content without interrupting the user-->
+    <div id="recommendationResult" aria-live="polite"></div>
+</section>
+
+</main>
+
+<footer>
+    <p>By John L. &nbsp;&nbsp;&nbsp;2026 CineHolder</p>
+</footer>
+
+</body>
+
+</html>
